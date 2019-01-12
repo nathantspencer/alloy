@@ -1,3 +1,16 @@
+/*==================*/
+/*---| General |--- */
+/*==================*/
+
+img
+{
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
 /*======================*/
 /*---| Page Layout |--- */
 /*======================*/
@@ -22,6 +35,12 @@
 	margin: 15px;
 	text-align: center;
 	vertical-align: top;
+
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
 }
 
 #marriottCard
