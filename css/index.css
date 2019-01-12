@@ -44,6 +44,26 @@
 	background-color: #d9682e;
 }
 
+#spiritCard
+{
+	 background-color: #222222;
+}
+
+#hyattCard
+{
+	background-color: #0072ce;
+}
+
+#jetblueCard
+{
+	background-color: #00205b;
+}
+
+#americanCard
+{
+	background-color: #0078d2;
+}
+
 /*===============*/
 /*---| Logos |---*/
 /*===============*/
@@ -52,7 +72,7 @@
 {
 	width: 0px;
 	height: 60px;
-	width: 80px;
+	width: 100px;
 	margin: 25px 0% 0% 30px;
 	text-align: left;
 }
@@ -65,5 +85,11 @@
 .wideLogoImage
 {
 	padding-top: 5px;
+	width: 80%;
+}
+
+.extraWideLogoImage
+{
+	padding-top: 10px;
 	width: 100%;
 }
