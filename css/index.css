@@ -64,6 +64,21 @@
 	background-color: #0078d2;
 }
 
+#hiltonCard
+{
+	background-color: #104c97;
+}
+
+#unitedCard
+{
+	background-color: #003096;
+}
+
+#southwestCard
+{
+	background-color: #304cb2;
+}
+
 /*===============*/
 /*---| Logos |---*/
 /*===============*/
@@ -72,7 +87,7 @@
 {
 	width: 0px;
 	height: 60px;
-	width: 100px;
+	width: 90px;
 	margin: 25px 0% 0% 30px;
 	text-align: left;
 }
@@ -90,6 +105,6 @@
 
 .extraWideLogoImage
 {
-	padding-top: 10px;
+	padding-top: 7.5px;
 	width: 100%;
 }
