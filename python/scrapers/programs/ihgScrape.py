@@ -3,9 +3,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-import time
-import code
-
 
 # TODO: remove this hardcoded secrets
 content = []
@@ -15,6 +12,7 @@ username = content[0]
 password = content[1]
 
 options = webdriver.ChromeOptions()
+# TODO: run headless in production
 #options.add_argument('headless')
 options.add_argument('--incognito')
 driver = webdriver.Chrome('../tools/chromedriver', chrome_options=options)
