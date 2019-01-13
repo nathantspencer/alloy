@@ -35,6 +35,6 @@ password_field.click()
 
 # sometimes this password entry fails, so we'll try up to 10 times
 password_attempts = 0
-while(password_field.get_attribute('value') == '' && password_attempts < 10):
+while password_field.get_attribute('value') == '' and password_attempts < 10:
 	password_field.send_keys(password)
 	password_attempts = password_attempts + 1
