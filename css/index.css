@@ -1,129 +1,93 @@
 /*==================*/
 /*---| General |--- */
 /*==================*/
-
-img
-{
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-o-user-select: none;
-	user-select: none;
-}
+img {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none; }
 
 /*======================*/
 /*---| Page Layout |--- */
 /*======================*/
-
-#cardContainer
-{
-	height: 100%;
-	display: block;
-	text-align: center;
-}
+#cardContainer {
+  height: 100%;
+  display: block;
+  text-align: center; }
 
 /*================*/
 /*---| Cards |--- */
 /*================*/
+.card {
+  display: inline-block;
+  border-radius: 20px;
+  width: 300px;
+  height: 180px;
+  margin: 15px;
+  text-align: center;
+  vertical-align: top;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none; }
 
-.card
-{
-	display: inline-block;
-	border-radius: 20px;
-	width: 300px;
-	height: 180px;
-	margin: 15px;
-	text-align: center;
-	vertical-align: top;
+#notLoadedCard {
+  background-color: #222222; }
 
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-o-user-select: none;
-	user-select: none;
-}
+#marriottCard {
+  background-color: #0075d5; }
 
-#marriottCard
-{
-	background-color: #0075d5;
-}
+#deltaCard {
+  background-color: #991933; }
 
-#deltaCard
-{
-	background-color: #991933;
-}
+#frontierCard {
+  background-color: #006643; }
 
-#frontierCard
-{
-	background-color: #006643;
-}
+#ihgCard {
+  background-color: #d9682e; }
 
-#ihgCard
-{
-	background-color: #d9682e;
-}
+#spiritCard {
+  background-color: #222222; }
 
-#spiritCard
-{
-	 background-color: #222222;
-}
+#hyattCard {
+  background-color: #0072ce; }
 
-#hyattCard
-{
-	background-color: #0072ce;
-}
+#jetblueCard {
+  background-color: #00205b; }
 
-#jetblueCard
-{
-	background-color: #00205b;
-}
+#americanCard {
+  background-color: #0078d2; }
 
-#americanCard
-{
-	background-color: #0078d2;
-}
+#hiltonCard {
+  background-color: #104c97; }
 
-#hiltonCard
-{
-	background-color: #104c97;
-}
+#unitedCard {
+  background-color: #003096; }
 
-#unitedCard
-{
-	background-color: #003096;
-}
-
-#southwestCard
-{
-	background-color: #304cb2;
-}
+#southwestCard {
+  background-color: #304cb2; }
 
 /*===============*/
 /*---| Logos |---*/
 /*===============*/
+.logoContainer {
+  width: 0px;
+  height: 60px;
+  width: 90px;
+  margin: 25px 0% 0% 30px;
+  text-align: left; }
 
-.logoContainer
-{
-	width: 0px;
-	height: 60px;
-	width: 90px;
-	margin: 25px 0% 0% 30px;
-	text-align: left;
-}
+.logoImage {
+  height: 100%; }
 
-.logoImage
-{
-	height: 100%;
-}
+.wideLogoImage {
+  padding-top: 5px;
+  width: 80%; }
 
-.wideLogoImage
-{
-	padding-top: 5px;
-	width: 80%;
-}
+.extraWideLogoImage {
+  padding-top: 7.5px;
+  width: 100%; }
 
-.extraWideLogoImage
-{
-	padding-top: 7.5px;
-	width: 100%;
-}
+/*# sourceMappingURL=index.css.map */
