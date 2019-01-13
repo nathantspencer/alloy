@@ -28,17 +28,17 @@ def get_valuations():
 	table = soup.find('section', { 'class': 'table' })
 
 	result = {}
-	result['ihg'] 		= get_valuation(table, 'IHG Rewards Club')
-	result['delta'] 	= get_valuation(table, 'Delta SkyMiles')
-	result['american'] 	= get_valuation(table, 'American AAdvantage')
-	result['frontier'] 	= get_valuation(table, 'Frontier Miles')
-	result['hilton'] 	= get_valuation(table, 'Hilton Honors')
-	result['hyatt'] 	= get_valuation(table, 'World of Hyatt Loyalty Program')
-	result['jetblue'] 	= get_valuation(table, 'JetBlue TrueBlue Rewards Program')
-	result['marriott'] 	= get_valuation(table, 'Marriott Rewards')
+	result['ihg']       = get_valuation(table, 'IHG Rewards Club')
+	result['delta']     = get_valuation(table, 'Delta SkyMiles')
+	result['american']  = get_valuation(table, 'American AAdvantage')
+	result['frontier']  = get_valuation(table, 'Frontier Miles')
+	result['hilton']    = get_valuation(table, 'Hilton Honors')
+	result['hyatt']     = get_valuation(table, 'World of Hyatt Loyalty Program')
+	result['jetblue']   = get_valuation(table, 'JetBlue TrueBlue Rewards Program')
+	result['marriott']  = get_valuation(table, 'Marriott Rewards')
 	result['southwest'] = get_valuation(table, 'Southwest Rapid Rewards')
-	result['spirit'] 	= get_valuation(table, 'Spirit Airlines Free Spirit')
-	result['united']	= get_valuation(table, 'United MileagePlus');
+	result['spirit']    = get_valuation(table, 'Spirit Airlines Free Spirit')
+	result['united']    = get_valuation(table, 'United MileagePlus');
 	return json.dumps(result)
 
 if __name__ == '__main__':
