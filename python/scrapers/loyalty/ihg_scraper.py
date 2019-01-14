@@ -3,6 +3,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+import time
+
 
 # TODO: remove this hardcoded secrets
 content = []
@@ -18,21 +20,25 @@ options.add_argument('--incognito')
 driver = webdriver.Chrome('../tools/chromedriver', chrome_options=options)
 driver.get('https://www.ihg.com')
 
-sign_in_button = WebDriverWait(driver, 10).until(
+web_driver_timout_seconds = 10
+
+sign_in_button = WebDriverWait(driver, web_driver_timout_seconds).until(
 	EC.element_to_be_clickable((By.XPATH, '//*[@title="Sign In"]')));
 sign_in_button.click()
 
-username_field = WebDriverWait(driver, 10).until(
+username_field = WebDriverWait(driver, web_driver_timout_seconds).until(
 	EC.element_to_be_clickable((By.ID, 'UHF_username')));
 username_field.click()
 username_field.send_keys(username)
 
-password_field = WebDriverWait(driver, 10).until(
+password_field = WebDriverWait(driver, web_driver_timout_seconds).until(
 	EC.element_to_be_clickable((By.ID, 'UHF_password')));
 password_field.click()
 
 # sometimes this password entry fails, so we'll try up to 10 times
-password_attempts = 0
-while password_field.get_attribute('value') == '' and password_attempts < 10:
+# TODO: this still fails fairly often
+attempts = 0
+while len(password_field.get_attribute('value')) != 4 and attempts < 10:
 	password_field.send_keys(password)
-	password_attempts = password_attempts + 1
+	attempts = attempts + 1
+	sleep(0.1)
