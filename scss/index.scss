@@ -4,6 +4,13 @@
 /*---| General |--- */
 /*==================*/
 
+$font-stack: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+
+div
+{
+	color: #ffffff;
+}
+
 img
 {
 	@include user-select(none);
@@ -113,26 +120,57 @@ img
 
 .logoContainer
 {
+	position: absolute;
 	width: 0px;
-	height: 60px;
-	width: 90px;
-	margin: 25px 0% 0% 30px;
+	height: 40px;
+	width: 60px;
+	margin: 25px 0 0 30px;
 	text-align: left;
+}
+
+%logoImage-shared
+{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: auto;
 }
 
 .logoImage
 {
+	@extend %logoImage-shared;
 	height: 100%;
 }
 
 .wideLogoImage
 {
-	padding-top: 5px;
+	@extend %logoImage-shared;
 	width: 80%;
 }
 
 .extraWideLogoImage
 {
-	padding-top: 7.5px;
+	@extend %logoImage-shared;
 	width: 100%;
+}
+
+/*======================*/
+/*---| Card Points |---*/
+/*=====================*/
+
+.pointsContainer
+{
+	position: absolute;
+	width: 150px;
+	height: 40px;
+	line-height: 40px;
+	margin: 25px 0 0 110px;
+	text-align: right;
+	font-size: 22px;
+	font-family: $font-stack;
+}
+
+.pointsUnitSpan
+{
+	font-size: 12px;
 }
