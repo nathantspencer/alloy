@@ -36,8 +36,10 @@ submit_button = WebDriverWait(driver, web_driver_timout_seconds).until(
 submit_button.click()
 
 profile_button = WebDriverWait(driver, web_driver_timout_seconds).until(
-	EC.element_to_be_clickable((By.XPATH, '//a[contains(@class, "logIn-link-logo")]')))
+	EC.element_to_be_clickable((By.XPATH, '//a[@href="/rewardsclub/us/en/account-mgmt/home"]')))
 profile_button.click()
+
+# TODO: scrape info from account page
 
 code.interact(local=locals())
 
