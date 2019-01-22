@@ -13,3 +13,6 @@ password = credentials[1]
 ihg_results = ihg_scraper.get_account_info(username, password, geckodriver_path)
 ihg_results['value'] = ihg_results['points'] * valuations['ihg'] / 100.0
 print(ihg_results)
+
+# this all might actually be done client-side instead to avoid having to scrape
+# valuations over and over again...
