@@ -13,14 +13,14 @@ def get_valuation(valuation_table, program_name):
 	"""
 	row = valuation_table.find(text=program_name).parent.parent
 	valuation = row.findChildren('td', recursive=False)[3].text
-	return valuation
+	return float(valuation)
 
 def get_valuations():
 	"""
-	Creates and returns a JSON mapping of loyalty program abbreviations to the
-	current value of each point, in cents.
+	Creates and returns a dictionary mapping of loyalty program abbreviations to
+	the current value of each point, in cents.
 
-	:return: JSON object containing loyalty program valuations
+	:return: dictionary containing loyalty program valuations
 	"""
 	tpg_valuation_url = 'https://thepointsguy.com/guide/monthly-valuations/'
 	tpg_response = requests.get(tpg_valuation_url, verify=True)
@@ -38,12 +38,12 @@ def get_valuations():
 	result['marriott']  = get_valuation(table, 'Marriott Rewards')
 	result['southwest'] = get_valuation(table, 'Southwest Rapid Rewards')
 	result['spirit']    = get_valuation(table, 'Spirit Airlines Free Spirit')
-	result['united']    = get_valuation(table, 'United MileagePlus');
-	return json.dumps(result)
+	result['united']    = get_valuation(table, 'United MileagePlus')
+	return result
 
 if __name__ == '__main__':
 	"""
-	Prints a JSON object mapping of loyalty program abbreviations to the
+	Prints a dictionary mapping of loyalty program abbreviations to the
 	current value of each point in cents, according to thepointsguy.com.
 	"""
 	print(get_valuations())

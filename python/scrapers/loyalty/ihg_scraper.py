@@ -7,19 +7,19 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 
-def scrape(username, password):
+def get_account_info(username, password, geckodriver_path):
 	"""
-	Creates and returns a JSON object containing user's total points, point
+	Creates and returns a dictionary containing user's total points, point
 	expiration date, and loyalty level.
 
 	:param username: account username as a string
 	:param password: account password as a string
-	:return: JSON object containing account information
+	:param webdriver_path: relative path to the geckodriver executable
+	:return: dictionary containing account information
 	"""
 	options = Options()
-	options.headless = False
-	driver = webdriver.Firefox(options=options,
-		executable_path='../../../tools/geckodriver 3')
+	options.headless = True
+	driver = webdriver.Firefox(options=options, executable_path=geckodriver_path)
 
 	web_driver_timout_seconds = 10
 	driver.get('https://www.ihg.com/rewardsclub/us/en/sign-in/')
@@ -65,13 +65,13 @@ def scrape(username, password):
 
 if __name__ == '__main__':
 	"""
-	Prints a JSON object containing information scraped from IHG account:
+	Prints a dictionary containing information scraped from IHG account:
 	total points, expiration date, and loyalty level. Uses a hardcoded file
 	secrets.pass in the root directory of alloy for user credentials.
 	"""
-	content = []
+	credentials = []
 	with open('../../../secrets.pass') as f:
 	    credentials = f.readlines()
 	username = credentials[0]
 	password = credentials[1]
-	print(scrape(username, password))
+	print(get_account_info(username, password, '../../../tools/geckodriver 3'))
