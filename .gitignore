@@ -4,7 +4,7 @@
 #---| Generated files |---#
 #=========================#
 
-css/**
+static/css/**
 .sass-cache/**
 *.pyc
 *.log
