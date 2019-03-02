@@ -4,7 +4,7 @@
 #---| Generated files |---#
 #=========================#
 
-static/css/**
+alloy/static/css/**
 .sass-cache/**
 __pycache__/
 
