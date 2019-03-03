@@ -44,6 +44,11 @@ img
 	padding-left: 17.5px;
 }
 
+#navbarLogo:hover
+{
+	cursor: pointer;
+}
+
 /*======================*/
 /*---| Page Layout |--- */
 /*======================*/
@@ -79,7 +84,7 @@ img
 
 %card-shared:hover
 {
-	filter: brightness(80%);
+	filter: brightness(90%);
 	cursor: pointer;
 }
 
